@@ -4,7 +4,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <!-- 下面的meta配合js使用，动态缩放-->
+  <!--<meta name="viewport" content="width=320,minimum-scale=1,maximum-scale=5,user-scalable=no">-->
   <title>试试</title>
+  <script>
+        if(navigator.appVersion.toLowerCase().indexOf('android') != -1){
+            document.addEventListener("DOMContentLoaded",function(e){
+                document.getElementById('app').style.zoom = document.documentElement.clientWidth/320;
+            });
+        }
+  </script>
 </head>
 
 <body>
